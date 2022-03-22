@@ -5,7 +5,7 @@ function Incomings () {
 
     return(
         <div className="App">
-            <div className="container">
+            <div className="container incomingsborder mt-3">
                <div className="row m-5">
                    <div className="col m-auto">
                         <h2>Wallet</h2>
