@@ -1,26 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .App {
   text-align: center;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: radial-gradient(circle at 44% 13%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 98%,transparent 98%, transparent 100%),radial-gradient(circle at 87% 84%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 46%,transparent 46%, transparent 100%),radial-gradient(circle at 84% 60%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 40%,transparent 40%, transparent 100%),radial-gradient(circle at 21% 32%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 28%,transparent 28%, transparent 100%),radial-gradient(circle at 57% 12%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 34%,transparent 34%, transparent 100%),radial-gradient(circle at 33% 60%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 29%,transparent 29%, transparent 100%),radial-gradient(circle at 3% 11%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 0% 74%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 87%,transparent 87%, transparent 100%),linear-gradient(45deg, rgb(99, 105, 190),rgb(99, 70, 205));
+}
+
+.titleborder {
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 5px;
 }
 
 .balanceborder {
   border: 2px solid red;
   border-radius: 12px;
   padding: 5px;
-  background-color: antiquewhite;
+  background-color: whitesmoke;
 }
 
 .incomingsborder {
   border: 2px solid rgb(0, 183, 255);
   border-radius: 12px;
   padding: 5px;
+  background-color: whitesmoke;
 }
 
 .expensesborder {
   border: 2px solid rgb(178, 224, 12);
   border-radius: 12px;
   padding: 5px;
+  background-color: whitesmoke;
 }
 
+.incomingnumber {
+  color: green;
+}
+
+.expensesnumber {
+  color: red;
+}
 
 .App-link {
   color: #61dafb;
