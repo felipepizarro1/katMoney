@@ -8,7 +8,7 @@ function Title () {
             <div className="container titleborder mt-1">
                <div className="row m-1">
                    <div className="col m-auto">
-                        <h2>KatMoney</h2>
+                        <h2 className="titlepage">KatMoney</h2>
                    </div>
                </div>
             </div>
