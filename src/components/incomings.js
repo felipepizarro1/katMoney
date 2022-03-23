@@ -8,10 +8,10 @@ function Incomings () {
     return(
         <div className="App">
             <div className="container incomingsborder mt-3">
-               <div className="row m-4">
+               <div className="row m-2">
                    <div className="col m-auto">
                         <h3>Wallet</h3>
-                        <img width={100} src={cointest} />
+                        <img width={100} src={cointest} className="incomingimg" />
                         <h4>$200</h4>
                    </div>
                    <div className="col m-auto">
