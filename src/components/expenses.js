@@ -20,7 +20,7 @@ function Expenses() {
                         <h6>$265</h6>
                     </div>
                     <div className="col m-auto">
-                        <h5>Entertainment</h5>
+                        <h5>Health</h5>
                         <img width={80} src={logo} className="mb-2"/>
                         <h6>$265</h6>
                     </div>

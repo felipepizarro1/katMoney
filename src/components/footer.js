@@ -8,7 +8,7 @@ return(
         <div className="container m-2 d-flex justify-content-end">
             <div className="row">
                 <div className="col">
-                 <h6>Designed by Felipe Pizarro</h6>
+                 <h8>Designed by Felipe Pizarro</h8>
                  </div>
             </div>
         </div>

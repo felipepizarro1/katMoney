@@ -10,12 +10,12 @@ function Incomings () {
             <div className="container incomingsborder mt-3">
                <div className="row m-2">
                    <div className="col m-auto">
-                        <h3>Wallet</h3>
-                        <img width={100} src={cointest} className="incomingimg" />
+                        <h3 draggable="true">Wallet</h3>
+                        <img width={100} src={cointest} className="incomingimg" draggable="true"/>
                         <h4>$200</h4>
                    </div>
                    <div className="col m-auto">
-                        <h3>Bank Account</h3>
+                        <h3>Bank 1</h3>
                         <img width={100} src={cointest} />
                         <h4>$33,000</h4>
                    </div>

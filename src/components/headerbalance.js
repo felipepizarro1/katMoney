@@ -11,7 +11,7 @@ return(
                 <div className="col-1 m-auto">
                     <h5>Menu</h5>
                 </div>
-                <div className="col-3 m-auto">
+                <div className="col-3 m-auto d-none d-sm-block">
                     <h5>Incoming</h5>
                     <h6 className="incomingnumber">$3,500</h6>
                 </div>
@@ -19,7 +19,7 @@ return(
                     <h4>Expenses</h4>
                     <h5 className="expensesnumber">$2,050</h5>
                 </div>
-                <div className="col-3 m-auto">
+                <div className="col-3 m-auto d-none d-sm-block">
                     <h5>Balance</h5>
                     <h6>$1,450</h6>
                 </div>
