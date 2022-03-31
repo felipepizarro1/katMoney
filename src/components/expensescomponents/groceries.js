@@ -14,7 +14,7 @@ function Groceries () {
                  </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start"}}>
-                <BudgetCard name={"weon"} amount={"400"}></BudgetCard>
+                <BudgetCard name={"Groceries"} amount={200} max={500}></BudgetCard>
             </div>
         </Container>
 
