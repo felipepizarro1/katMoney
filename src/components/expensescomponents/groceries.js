@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Stack } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { Container } from 'reactstrap';
+import BudgetCard from './BudgetCard';
 
 function Groceries () {
     return(
@@ -12,7 +13,9 @@ function Groceries () {
                  <Button outline color="primary" className='m-2'>Add Expense</Button>
                  </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start"}}> </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start"}}>
+                <BudgetCard name={"weon"} amount={"400"}></BudgetCard>
+            </div>
         </Container>
 
 )
