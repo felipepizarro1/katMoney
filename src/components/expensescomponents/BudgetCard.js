@@ -1,9 +1,18 @@
-import { Card, CardBody, CardTitle, Progress } from "reactstrap";
+import { Button, Container, Card, CardBody, CardTitle, Progress } from "reactstrap";
 import { currencyFormatter } from "./utils";
 
-export default function BudgetCard({ name, amount, max }) {
+
+export default function BudgetCard({ name, amount, max, gray }) {
+
+  const classNames = []
+  if (amount > max) {
+    classNames.push("bg-danger","bg-opacity-10")
+  }
+  else if (gray) {
+    classNames.push("bg-light")
+  }
   return (
-    <Card>
+    <Card className={classNames.join(" ")}>
         <CardBody>
             <CardTitle className="d-flex justify-content-between align-items-baseline fw-normal mb-3">
                 <div className="me-2">{name}</div>
@@ -18,9 +27,15 @@ export default function BudgetCard({ name, amount, max }) {
             min={0} 
             max={max} 
             value={amount}/>
-
-
-        </CardBody>
+            <Container className="my-4">
+            <div className="row">
+                <div className="col">
+                 <Button color="primary" className='m-1 ms-auto'>Add Expense</Button>
+                 <Button outline color="secondary" className='m-1'>View Expenses</Button>
+                 </div>
+            </div>
+        </Container>
+      </CardBody>
     </Card>
   )
 }
