@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import { BudgetsProvider } from "./contexts/BudgetContext"
 
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <BudgetsProvider>
+      <App />
+    </BudgetsProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );
