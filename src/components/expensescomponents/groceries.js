@@ -3,8 +3,10 @@ import { Button } from 'reactstrap';
 import { Container } from 'reactstrap';
 import BudgetCard from './BudgetCard';
 
+
 function Groceries () {
     return(
+        <>
         <Container className="my-4">
             <div className="row">
                 <div className="col">
@@ -22,7 +24,8 @@ function Groceries () {
                 </BudgetCard>
             </div>
         </Container>
-
+        
+        </>
 )
 }
 
