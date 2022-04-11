@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import { Container } from 'reactstrap';
 import BudgetCard from './BudgetCard';
+import { useState } from 'react'
 
 
 function Groceries () {
@@ -10,8 +11,8 @@ function Groceries () {
         <Container className="my-4">
             <div className="row">
                 <div className="col">
-                 <h2>I'M GROCERIES</h2>
-                 <Button color="primary" className='m-2'>Add Budget</Button>
+                 <h2>Budgets</h2>
+                 <Button color="primary" className='m-2' >Add Budget</Button>
                  <Button outline color="primary" className='m-2'>Add Expense</Button>
                  </div>
             </div>
