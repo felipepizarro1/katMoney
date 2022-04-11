@@ -8,12 +8,14 @@ import Title from './components/title';
 import Footer from './components/footer';
 import Groceries from './components/expensescomponents/groceries';
 import AddBudgetModal from './components/AddBudgetModal';
+import { useState } from 'react'
 
-class App extends Component {
-  render(){
+
+function App() {
+  const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
   return (
     <div className="App">
-      <AddBudgetModal show/>
+      <AddBudgetModal show={showAddBudgetModal} handleClose={() => setShowAddBudgetModal(false) } />
       <Title/>
       <Balance />
       <Incomings/>
@@ -23,7 +25,7 @@ class App extends Component {
       
     </div>
   );
- }
+ 
 }
 
 export default App;
