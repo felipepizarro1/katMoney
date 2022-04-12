@@ -8,6 +8,7 @@ import Title from './components/title';
 import Footer from './components/footer';
 import Groceries from './components/expensescomponents/groceries';
 import AddBudgetModal from './components/AddBudgetModal';
+import AddExpenseModal from './components/AddExpensesComponent';
 import { useState } from 'react'
 
 import { Button } from 'reactstrap';
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <AddBudgetModal show={showAddBudgetModal} handleClose={() => setShowAddBudgetModal(false) } />
+      <AddExpenseModal show={true}  />
       <Container className="my-4">
         <div className="row">
             <div className="col">
@@ -30,7 +32,7 @@ function App() {
             </div>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start"}}>
-          hola
+        
                 {budgets.map(budget =>{
                   const amount = getBudgetExpenses(budget.id).reduce((total, expense) => total + expense.amount, 0)
                 return(
