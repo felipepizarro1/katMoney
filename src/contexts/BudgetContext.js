@@ -9,19 +9,8 @@ export function useBudgets () {
 
 }
 
-// {
-//     id:
-//     name:
-//     max
-// }
+export const UNCATEGORIZED_BUDGET_iD = "Uncategorized"
 
-// {
-//     id:
-//     budgetId:
-//     amount:
-//     description:
-
-// }
 
 export const BudgetsProvider = ({ children }) => {
     const [budgets, setBudgets] = useLocalStorage("budgets",[])

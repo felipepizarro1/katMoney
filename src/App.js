@@ -18,17 +18,31 @@ import { BudgetsProvider, useBudgets } from './contexts/BudgetContext';
 
 function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
+  const [showAddExpenseModal, setShowAddExpenseModal] = useState(false)
+  const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState()
   const { budgets, getBudgetExpenses } = useBudgets()
+  
+
+  function openAddExpenseModal(budgetId) {
+      setShowAddExpenseModal(true)
+      setAddExpenseModalBudgetId(budgetId)
+  }
+
+
   return (
     <div className="App">
       <AddBudgetModal show={showAddBudgetModal} handleClose={() => setShowAddBudgetModal(false) } />
-      <AddExpenseModal show={true}  />
+      <AddExpenseModal 
+      show={showAddExpenseModal}
+      defaultBudgetId={addExpenseModalBudgetId}
+      handleClose={() => setShowAddExpenseModal(false)}
+        />
       <Container className="my-4">
         <div className="row">
             <div className="col">
               <h2>Budgets</h2>
                 <Button color="primary" className='m-2' onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button>
-                <Button outline color="primary" className='m-2'>Add Expense</Button>
+                <Button outline color="primary" className='m-2' onClick={openAddExpenseModal}>Add Expense</Button>
             </div>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start"}}>
@@ -39,8 +53,9 @@ function App() {
                 <BudgetCard 
                 key={budget.id}
                 name={budget.name} 
-                amount={0} 
+                amount={amount} 
                 max={budget.max}
+                onAddExpenseClick={() => openAddExpenseModal(budget.id)}
                 />  
                 )
               })}
