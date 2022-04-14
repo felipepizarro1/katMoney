@@ -14,6 +14,7 @@ import { useState } from 'react'
 import { Button } from 'reactstrap';
 import { Container } from 'reactstrap';
 import BudgetCard from './components/expensescomponents/BudgetCard';
+import UncategorizedBudgetCard from './components/UncategorizedBudgetCard';
 import { BudgetsProvider, useBudgets } from './contexts/BudgetContext';
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
                 />  
                 )
               })}
+              <UncategorizedBudgetCard />
         </div>
       </Container>
       <Title/>

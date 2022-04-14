@@ -17,16 +17,18 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick 
             <CardTitle className="d-flex justify-content-between align-items-baseline fw-normal mb-3">
                 <div className="me-2">{name}</div>
                 <div className="d-flex align-items-baseline">{currencyFormatter.format(amount)}
-                <span className="text-muted fs-6 ms-1"> 
-                / {currencyFormatter.format(max)}</span>
+                {max && (<span className="text-muted fs-6 ms-1"> 
+                / {currencyFormatter.format(max)}</span>)}
                 </div>
             </CardTitle>
-            <Progress 
+            {max && (<Progress 
             className="rounded-pill" 
             color={getProgressBarVariant(amount, max)}
             min={0} 
             max={max} 
-            value={amount}/>
+            value={amount}
+            />
+            )}
             <Container className="my-4">
             <div className="row">
                 <div className="col">
