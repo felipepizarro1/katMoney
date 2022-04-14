@@ -2,7 +2,7 @@ import { Button, Container, Card, CardBody, CardTitle, Progress } from "reactstr
 import { currencyFormatter } from "./utils";
 
 
-export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick }) {
+export default function BudgetCard({ name, amount, max, gray, hideButtons, onAddExpenseClick }) {
 
   const classNames = []
   if (amount > max) {
@@ -29,14 +29,14 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick 
             value={amount}
             />
             )}
-            <Container className="my-4">
+            {!hideButtons && (<Container className="my-4">
             <div className="row">
                 <div className="col">
                  <Button color="primary" className='m-1 ms-auto' onClick={onAddExpenseClick}>Add Expense</Button>
                  <Button outline color="secondary" className='m-1'>View Expenses</Button>
                  </div>
             </div>
-        </Container>
+        </Container>)}
       </CardBody>
     </Card>
   )

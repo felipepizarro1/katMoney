@@ -16,6 +16,7 @@ import { Container } from 'reactstrap';
 import BudgetCard from './components/expensescomponents/BudgetCard';
 import UncategorizedBudgetCard from './components/UncategorizedBudgetCard';
 import { BudgetsProvider, useBudgets } from './contexts/BudgetContext';
+import TotalBudgetCard from './components/TotalBudgetCard';
 
 function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
@@ -43,7 +44,7 @@ function App() {
             <div className="col">
               <h2>Budgets</h2>
                 <Button color="primary" className='m-2' onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button>
-                <Button outline color="primary" className='m-2' onClick={openAddExpenseModal}>Add Expense</Button>
+                <Button outline color="danger" className='m-2' onClick={openAddExpenseModal}>Add Expense</Button>
             </div>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start"}}>
@@ -60,7 +61,8 @@ function App() {
                 />  
                 )
               })}
-              <UncategorizedBudgetCard />
+              <UncategorizedBudgetCard onAddExpenseClick={openAddExpenseModal} />
+              <TotalBudgetCard />
         </div>
       </Container>
       <Title/>
