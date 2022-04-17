@@ -1,13 +1,13 @@
 import React from 'react'
-import { Modal, Button } from "react-bootstrap"
+import { Modal, Button, Stack } from "react-bootstrap"
 import { BudgetsProvider, UNCATEGORIZED_BUDGET_iD, useBudgets } from '../contexts/BudgetContext'
 
 
 
 export default function ViewExpensesModal({ budgetId, handleClose }) {
     const { getBudgetExpenses, budgets, deleteBudget, deleteExpense } = useBudgets()
-
-    const budget = UNCATEGORIZED_BUDGET_iD === budgetID ? { name: "Uncategorized", id: UNCATEGORIZED_BUDGET_iD } : budgets.find(b => b.id === budgetId)
+    const expenses = getBudgetExpenses(budgetId)
+    const budget = UNCATEGORIZED_BUDGET_iD === budgetId ? { name: "Uncategorized", id: UNCATEGORIZED_BUDGET_iD } : budgets.find(b => b.id === budgetId)
 
   return (
     <Modal show={budgetId !=null} onHide={handleClose}>
@@ -22,25 +22,14 @@ export default function ViewExpensesModal({ budgetId, handleClose }) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form.Group className="mb-3" controlId="name">
-            <Form.Label>Name</Form.Label>
-            <Form.Control ref={nameRef} type="text" required />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="max">
-            <Form.Label>Maximum Spending</Form.Label>
-            <Form.Control
-              ref={maxRef}
-              type="number"
-              required
-              min={0}
-              step={0.01}
-            />
-          </Form.Group>
-          <div className="d-flex justify-content-end">
-            <Button variant="primary" type="submit">
-              Add
-            </Button>
-          </div>
+          <Stack direction="vertical" gap="3">
+            {expenses.map( expense => (
+              <Stack direction="horizontal" gap="2" key={expense.id}>
+                
+              </Stack>
+            )
+            )}
+          </Stack>
         </Modal.Body>
     </Modal>
   )
