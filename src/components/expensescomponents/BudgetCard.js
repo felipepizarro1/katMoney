@@ -4,7 +4,7 @@ import { currencyFormatter } from "./utils";
 
 export default function BudgetCard({ name, amount, max, gray, hideButtons, onAddExpenseClick, onViewExpensesClick,  }) {
 
-  const classNames = []
+  const classNames = ["boxborder",]
   if (amount > max) {
     classNames.push("bg-danger","bg-opacity-10")
   }

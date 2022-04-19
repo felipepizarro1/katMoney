@@ -48,9 +48,9 @@ function App() {
       <Container className="my-4">
         <div className="row">
             <div className="col">
-              <h2>Budgets</h2>
-                <Button color="primary" className='m-2' onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button>
-                <Button outline color="danger" className='m-2' onClick={openAddExpenseModal}>Add Expense</Button>
+              <h1>KatMoney</h1>
+                <Button color="primary" className='m-2 mb-2' onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button>
+                <Button outline color="danger" className='m-2 mb-2' onClick={openAddExpenseModal}>Add Expense</Button>
             </div>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start"}}>
@@ -72,12 +72,7 @@ function App() {
               <TotalBudgetCard />
         </div>
       </Container>
-      <Title/>
-      <Balance />
-      <Incomings/>
-      <Expenses/>
-      <Footer/>
-      <Groceries/>
+
       
     </div>
   );
